@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Учёт рабочего времени</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main>
+    <h1>Учёт рабочего времени</h1>
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <section>
+      <h2>Сотрудники</h2>
+      <form id="add-employee">
+        <input name="name" placeholder="Имя сотрудника" maxlength="100" required>
+        <button>Добавить</button>
+      </form>
+      <ul id="employees" class="employees"></ul>
+      <p id="no-employees" class="muted" hidden>Пока никого нет — добавьте первого сотрудника.</p>
+    </section>
+
+    <section>
+      <h2>Отчёт</h2>
+      <form id="report-form" class="report-form">
+        <label>С <input type="date" name="from" required></label>
+        <label>По <input type="date" name="to" required></label>
+        <label>Сотрудник
+          <select name="employee"><option value="">Все</option></select>
+        </label>
+        <button>Показать</button>
+      </form>
+      <div id="report"></div>
+    </section>
+  </main>
+
+  <template id="employee-row">
+    <li>
+      <span class="name"></span>
+      <span class="status"></span>
+      <form class="timer">
+        <input name="task" placeholder="Чем занимается?" maxlength="500">
+        <button class="start">▶ Старт</button>
+        <button class="stop" type="button">■ Стоп</button>
+      </form>
+    </li>
+  </template>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

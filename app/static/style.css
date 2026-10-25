@@ -1,0 +1,21 @@
+body { font-family: system-ui, sans-serif; margin: 0; background: #f6f7f9; color: #1d2330; }
+main { max-width: 860px; margin: 0 auto; padding: 24px 16px; }
+h1 { font-size: 1.6rem; }
+section { background: #fff; border-radius: 10px; padding: 16px 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+input, select, button { font: inherit; padding: 6px 10px; border: 1px solid #c8ccd4; border-radius: 6px; }
+button { background: #2f6fed; color: #fff; border-color: #2f6fed; cursor: pointer; }
+button:disabled { opacity: .4; cursor: default; }
+button.stop { background: #d64545; border-color: #d64545; }
+.employees { list-style: none; padding: 0; }
+.employees li { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px 0; border-top: 1px solid #eceef2; }
+.employees .name { font-weight: 600; min-width: 140px; }
+.employees .status { color: #7a8190; min-width: 160px; font-variant-numeric: tabular-nums; }
+.employees .timer { display: flex; gap: 6px; flex: 1; }
+.employees .timer input { flex: 1; min-width: 120px; }
+.report-form { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #eceef2; }
+th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.muted { color: #7a8190; }
+.error { background: #fde8e8; color: #9b1c1c; padding: 8px 12px; border-radius: 6px; }
+.employees .status.active { color: #2c8a4b; font-weight: 600; }
